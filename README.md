@@ -1,5 +1,5 @@
 
-#Sally Stash Game
+# Sally Stash Game
 
 For this assignment I created the different versions of a children’s game
 designed to encourage logic, strategy, and critical thinking as well as teach
@@ -9,5 +9,5 @@ each tries to find the stacks the other has hidden. Interestingly, it is believe
 that real tree squirrels hide their nuts by size, type, nutritional value and taste
 using a spatial chunking technique so they can find them later.
 
-## All the details are inside the pdf
+#### All the details are inside the pdf
   
