@@ -1,0 +1,15 @@
+package edu.duke.ece651.sallysstash;
+
+public class place_hit {
+  public void place(board enemy_board, hit my_hit) {
+    enemy_board.boardArrayList.get(my_hit.x).set(my_hit.y, '*');
+  }
+
+  public void place_enemyhit(board enemy_board, hit my_hit) {
+    enemy_board.boardArrayList.get(my_hit.x).set(my_hit.y, my_hit.color);
+  }
+
+  public void place_enemymiss(board enemy_board, hit my_hit) {
+    enemy_board.boardArrayList.get(my_hit.x).set(my_hit.y, 'X');
+  }
+}

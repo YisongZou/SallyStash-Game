@@ -1,0 +1,23 @@
+package edu.duke.ece651.sallysstash;
+
+public class place_stack {
+  public void place(board newBoard, stack mystack) {
+    if (mystack.direction == 0) {//It is horizontal
+      if (mystack.x >= 1 && mystack.x <= 20 && mystack.y + mystack.size <= 20 && mystack.y>=2) {
+        for (int i = mystack.y; i < mystack.y + mystack.size * 2 - 1; i += 2) {
+          newBoard.boardArrayList.get(mystack.x).set(i, mystack.color);
+        }
+      } else {
+        System.out.println("Invalid Placing");
+      }
+    } else if (mystack.direction == 1) {//Vertical
+      if (mystack.y >= 2 && mystack.y <= 20 && mystack.x + mystack.size <= 20 && mystack.x>=1) {
+        for (int i = mystack.x; i < mystack.x + mystack.size; i++) {
+          newBoard.boardArrayList.get(i).set(mystack.y, mystack.color);
+        }
+      } else {
+        System.out.println("Invalid Placing");
+      }
+    }
+  }
+}

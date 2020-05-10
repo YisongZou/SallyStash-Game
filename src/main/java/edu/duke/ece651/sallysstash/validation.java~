@@ -1,0 +1,39 @@
+package edu.duke.ece651.sallysstash;
+
+import java.util.ArrayList;
+
+public class validation {
+  public boolean validStack(int x, int y, int size, int direction, ArrayList<stack> my_stacks) {
+    boolean overlap = true;
+    stack my_stack = new stack(x, y, null, size, direction);
+    for (stack temp : my_stacks) {
+      if (temp.overlap(my_stack)) {
+        overlap = true;
+      }
+    }
+    overlap = false;
+    boolean valid = false;
+    if (direction == 0) {//It is horizontal
+      if (x >= 1 && x <= 20 && y + size * 2 - 2 <= 20 && y >= 2) {
+        valid = true;
+      } else {
+        valid = false;
+      }
+    } else if (direction == 1) {//Vertical
+      if (y >= 2 && y <= 20 && x + size <= 21 && x >= 1) {
+        valid = true;
+      } else {
+        valid = false;
+      }
+    }
+    return (!overlap) && valid;
+  }
+
+  public boolean validHit(int x, int y) {
+    if (x >= 1 && x <= 20 && y >= 2 && y <= 20) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}

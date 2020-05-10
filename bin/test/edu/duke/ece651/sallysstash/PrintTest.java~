@@ -1,0 +1,13 @@
+package edu.duke.ece651.sallysstash;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class PrintTest {
+  @Test
+  public void test_() {
+    print my_print = new print();
+  }
+
+}

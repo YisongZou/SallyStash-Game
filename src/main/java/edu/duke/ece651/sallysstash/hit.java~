@@ -1,0 +1,12 @@
+package edu.duke.ece651.sallysstash;
+
+public class hit {
+  public int x;
+  public int y;
+
+  public hit(int X, int Y) {
+    x = X;
+    y = Y;
+  }
+
+}

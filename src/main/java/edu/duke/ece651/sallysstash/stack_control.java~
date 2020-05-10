@@ -1,0 +1,32 @@
+package edu.duke.ece651.sallysstash;
+
+import java.util.ArrayList;
+
+public class stack_control {
+  public ArrayList<stack> stackArray;
+
+  public void placehit(int alphabet, int number,ArrayList<stack> enemyStacks, board enemy_board) {
+    
+    for (stack enemy_stack : enemyStacks ) {
+      if (enemy_stack.inside(alphabet, number)) {
+        enemy_stack.hitArray.add(new hit(alphabet, number, enemy_stack.color));
+        place_hit temp = new place_hit();
+        temp.place_enemyhit(enemy_board, new hit(alphabet, number, enemy_stack.color));
+        return;
+      }
+    }
+    //If this is a miss
+    place_hit placer = new place_hit();
+    placer.place_enemymiss(enemy_board, new hit(alphabet, number, null));
+    
+  }
+
+  public void addStack(int x, int y, Character color, int size, int direction) {
+        stackArray.add(new stack(x, y, color, size, direction));
+  }
+  
+
+  public stack_control() {
+    stackArray = new ArrayList<stack>();
+  }
+}

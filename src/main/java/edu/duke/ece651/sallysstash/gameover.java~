@@ -1,0 +1,6 @@
+package edu.duke.ece651.sallysstash;
+
+public class gameover {
+  public boolean endgame(){}  
+
+}

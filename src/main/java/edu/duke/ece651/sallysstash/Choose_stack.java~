@@ -1,0 +1,20 @@
+package edu.duke.ece651.sallysstash;
+import java.util.Scanner;
+
+public class Choose_stack {
+  public void choose(Scanner in,stack_control A_control, validation valid, char color) {
+    in = new Scanner(System.in);
+    String input = in.nextLine();
+    input_converter converter = new input_converter(input); 
+    while (!valid.validStack(converter.x, converter.y, 2, converter.direction, A_control.stackArray)) {
+      System.out.println("Invalid input, input out of board or collides with another stack, please input again\n");
+      in = new Scanner(System.in);
+      input = in.nextLine();
+      converter = new input_converter(input);
+      if (!valid.validStack(converter.x, converter.y, 2, converter.direction, A_control.stackArray)) {
+        continue;
+      }
+    }
+    A_control.addStack(converter.x, converter.y, color, 2, converter.direction);
+  }
+}
