@@ -1,7 +1,7 @@
 
 # Sally Stash Game
 
-For this assignment I created the different versions of a children’s game
+For this project I created the different versions of a children’s game
 designed to encourage logic, strategy, and critical thinking as well as teach
 them the difference between rows and columns. The game, Sally’s Stash, has
 two players hiding different colored stacks of gold for the squirrel and then
